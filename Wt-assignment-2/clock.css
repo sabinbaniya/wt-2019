@@ -1,0 +1,57 @@
+#clock{
+	display: flex;
+}
+
+#clockContainer{
+	position: relative;
+	height: 30vw;
+	width: 30vw;
+	background: url(clock.png) no-repeat;
+	background-size: 100%;
+    
+}
+
+#hour, #minute, #second{
+	position: absolute;
+	background: black;
+	border-radius: 10px;
+	transform-origin: bottom;
+}
+
+#hour{
+	width: 2%;
+	height: 29%;
+	top: 22%;
+	left: 48.15%;
+	opacity: 0.8;
+}
+
+#minute{
+	width: 1.5%;
+	height: 42%;
+	top: 9%;
+	left: 48.4%;
+	opacity: 0.8;			
+}
+
+#second{
+	width: 1%;
+	height: 46%;
+	top: 5%;
+	left: 48.6%;
+	opacity: 0.8;	
+}
+
+#digitalClock{
+	font-family: sans-serif;
+	font-size: 6rem;
+	width: 40vw;
+	height: 20vw;
+	color: black;
+	margin-top: 10%;
+}
+
+.digitalClock h1{
+	color: black;
+	font-size: 20px; 
+}
