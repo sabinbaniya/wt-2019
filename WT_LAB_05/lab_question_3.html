@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            
+        }
+        form{
+            background-color: rgb(131, 179, 179);
+            border-radius: 50;
+            min-height: 100vh;
+        }
+
+        label{
+            margin: auto;
+            padding: 10px 10px 10px 10px;
+        }
+
+        #input_1{
+            margin-top: 10px;
+        }
+
+        #input_1, #input_2, #result{
+           border-radius: 25px;
+           padding: 5px 10px 5px 10px;
+        }
+
+        button{
+            margin-left: 5px;
+            padding: 5px ;
+            border: 0px;
+            border-radius: 25px;
+            background-color: aquamarine;
+        }
+
+    </style>
+
+</head>
+<body>
+<div>
+    <form >
+        <label >Enter a number: </label>
+        <input id="input_1" >
+        <br> 
+        <br> 
+
+        <label >Enter another number: </label>
+        <input id="input_2" >
+        <br> 
+        <br> 
+
+        <button id="add" onclick="addition()">Add</button>
+        <button id="sub" onclick="subtraction()">Subtract</button>
+        <button id="mul" onclick="multiplication()">Multiply</button>
+        <button id="dvd" onclick="division()">Divide</button>
+        <br> 
+        <br>
+
+
+        <label >Result: </label>
+        <input id="result" >
+
+    </form>
+</div>
+
+<script>
+    var num1 = document.getElementById("input_1");
+    var num2 = document.getElementById("input_2");
+
+    function addition(){
+        var a = Number(num1.value);
+        var b = Number(num2.value);
+
+        var total = a + b;
+
+        document.getElementById("result").value = total;
+        
+    }
+
+    function subtraction(){
+        var a = Number(num1.value);
+        var b = Number(num2.value);
+
+        var total = a - b;
+
+        document.getElementById("result").value = total;
+    }
+
+    function multiplication(){
+        var a = Number(num1.value);
+        var b = Number(num2.value);
+
+        var total = a * b;
+
+        document.getElementById("result").value = total;
+    }
+
+    function division(){
+        var a = Number(num1.value);
+        var b = Number(num2.value);
+
+        var total = a/b;
+
+        document.getElementById("result").value = total;
+    }
+
+</script>
+    
+</body>
+</html>
