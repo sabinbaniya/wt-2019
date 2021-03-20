@@ -1,4 +1,4 @@
-This is the theory for Strings & DOM manipulation in javascript for the lab session that took place on 2021/03/18.
+This is the theory for Strings, Arrays & DOM manipulation in javascript for the lab session that took place on 2021/03/18.
 
 Strings in javascript:
 Strings in javascript are just like string in any other programming language such as c or c++.
@@ -43,10 +43,15 @@ Array methods in JS:
 5. shift():: This method removes the first item of the array and pushes other items to lower index of array as well as returns the shifted item.
 6. unshift():: This method addes new element to the array at the beginning.
 
+DOM ( Document Object Model ) in JS
 
+We can make many changes such as attributes, elements, css styling etc in an html page with the help of DOM manipulation with JS.
 
+Document:
 
+Document object represents a web page. If we want to access any element in an HTML page we always start by writing document, the after that we write syntax.
 
+The getElementById method:
+The most common way of accessing a element of HTML is by refrencing through it's id.
 
-
-
+we can also get element by tag name and class name etc.
