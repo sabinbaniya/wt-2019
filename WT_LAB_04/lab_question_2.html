@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAP to illustrate element positioning, stacking element.</title>
+    <style>
+        img{
+            height: 250px;
+        }
+        #img1{
+            position: absolute;
+        }
+
+        #img2{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <img id="img1" onclick="upper(id)" src="f630371632.jpg" >
+    <img id="img2" onclick="upper(id)" src="f630371248.jpg" >
+
+    <script>
+
+        var a=1;
+
+        
+        function upper(id){
+            var x = document.getElementById("img1");
+            var y = document.getElementById("img2")
+            if (id=="img1"){
+                x.style.zIndex = "10";
+                y.style.zIndex = "0";
+                
+            }
+            else{
+                y.style.zIndex = "10";
+                x.style.zIndex = "0";
+
+            }
+            
+        }
+
+    </script>
+    
+</body>
+</html>
