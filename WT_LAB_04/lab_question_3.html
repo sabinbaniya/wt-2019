@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAP to illustrate dynamic content in JS</title>
+    <style>
+        #img{
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <img id="img"  src="f630371632.jpg">
+
+    <button id="btn" onclick="showHide()">hide</button>
+    
+    <script>
+
+        let img = document.getElementById("img");
+        let btn = document.getElementById("btn");
+
+        var a;
+        function showHide(){
+            if(a==1){
+                img.style.display="inline";
+                btn.innerHTML = "Hide";
+                return a=0;
+            }
+            else{
+                img.style.display="none";
+                btn.innerHTML = "Show"
+                return a=1;
+            }
+            
+        }
+
+    </script>
+    
+</body>
+</html>
