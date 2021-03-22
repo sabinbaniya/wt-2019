@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log In</title>
+	<style type="text/css">
+		
+		div{
+			border-radius: 50px;
+			position:absolute;
+			right:30%;
+			padding:10%;
+			background-color: rgb(217, 233, 233);
+		}
+		.login{
+			text-align: center;
+			font-size: 30px;
+			margin-bottom: 10px;
+			display: block;
+			align-items: right;
+			padding:10px;
+		}
+		.text{
+			text-align:left;
+			display: block;
+		}
+		#button{
+			background-color: #1168da;
+			border-style: none;
+			position:absolute;
+			margin-top: 10px;
+			top:73%;
+			left:70%;
+			color:white;
+			font-size:14px;
+			border-radius:10px;
+			padding:10px 15px 10px 15px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<label for="email" class="login">Email: </label>
+		<input type="text" id=email class="login" >
+		<label for="password" class="login">Password:</label>
+		<input type="password" id=password class="login" >
+		<input type="submit" class="login" value="Log In" id=button onclick="validate()">
+	</div>
+	<script type="text/javascript">
+		function validate(){
+			var email = document.getElementById("email").value;
+			var password = document.getElementById("password").value;
+			var emailCheck=false;
+			var passwordverified=true;
+			var passwordCheck=[0,0,0,0];
+			for (var i = 0;i<email.length; i++) {
+				if(email[i]=="@"){
+					emailCheck=true;
+				}
+			}
+			if(password.length<8){
+				passwordverified=false;
+			}else{
+				for (var i = 0;i<password.length; i++) {
+					if(password[i]>="A" && password[i]<="Z"){
+						passwordCheck[0]=1;
+					}else if(password[i]>="a" && password[i]<="z"){
+						passwordCheck[1]=1;
+					}else if(password[i]>="1" && password[i]<="9"){
+						passwordCheck[2]=1;
+					}else{
+						passwordCheck[3]=1;
+					}
+				}
+			}
+			for (var i=0;i<passwordCheck.length;i++){
+				if(passwordCheck[i]!=1){
+					passwordverified=false;
+				}
+			}
+			if(emailCheck&&passwordverified){
+				alert("Login Sucessful");
+			}else{
+				if(emailCheck==false){
+					alert("Invalid email ID");
+				}
+				if(passwordverified==false){
+					alert("Password must contain at least one lower case,one upper case,one number and one special character.");
+				} 
+			}
+		}
+	</script>
+</body>
+</html>
