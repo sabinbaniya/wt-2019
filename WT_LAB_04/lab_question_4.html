@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drag and Drop</title>
+	<style type="text/css">
+		#btn1{
+			position: absolute;
+		}
+		#btn2{
+			position: absolute;
+			left:150px;
+		}
+	</style>
+</head>
+<body>
+	
+<input type="button" value="button 1" id="btn1" onmousedown ="grabber(event)">
+<input type="button" value="button 2" id="btn2" onmousedown ="grabber(event)">
+<script type="text/javascript">
+	var element;
+	function grabber(evt){
+		element =evt.currentTarget;
+		console.log(element);
+		document.addEventListener("mousemove",mover,true);
+		document.addEventListener("mouseup",dropper,true);
+	}
+	function mover(event){
+		element.style.left=event.clientX+"px";
+		element.style.top=event.clientY+"px";
+	}
+	function dropper(event){
+		document.removeEventListener("mousetop",dropper,true);
+		document.removeEventListener("mousemove",mover,true);
+	}
+</script>
+</body>
+</html>
