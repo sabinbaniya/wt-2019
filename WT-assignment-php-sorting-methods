@@ -1,0 +1,144 @@
+There are 6 sorting functions for arrays in PHP.
+
+1. sort():
+This function sorts arrays in ascending order of their alphabetical letter/ numerical order.We will use this method when we need to sort arrays in ascending alphabetical order / numerical order
+CODE::
+
+<?php
+$names = ["Ram","Hari","Sita"];
+sort($names);  //sorting function called
+
+$len = count($names);
+for($i = 0; $i < $names ;$i++){
+	echo $names[$i];
+    echo "<br>";
+
+}
+?>
+
+This will sort the given array items and print out following output:: 
+
+Hari
+Ram
+Sita
+
+
+2. rsort():
+This function does reverse of what sort() did i.e. this function will sort arrays in descending order of their alphabetical letter or numerical order.
+CODE::
+
+<?php
+$names = ["Ram","Hari","Sita"];
+rsort($names);  //sorting function called
+
+$len = count($names);
+for($i = 0; $i < $names ;$i++){
+	echo $names[$i];
+    echo "<br>";
+
+}
+?>
+
+This will sort the given array items and print out following output:: 
+
+Sita
+Ram
+Hari
+
+
+3. asort():
+
+This function sorts an associative array in ascending order according to their value.
+CODE::
+
+<?php
+$names = ["Ram"=>"10","Hari"=>"9","Sita"=>"8"];
+asort($names);  //sorting function called
+
+forEach($names as $name => $age){
+	echo "Name = ".$name. " age = " .$age;
+    echo "<br>";
+
+}
+?>
+
+This will sort the given associative array items and print out following output:: 
+
+Name = Sita age = 8
+Name = Hari age = 9
+Name = Ram age = 10
+
+
+4. arsort():
+
+This function sorts an associative array in descending order according to their value.
+CODE::
+
+<?php
+$names = ["Ram"=>"10","Hari"=>"9","Sita"=>"8"];
+arsort($names);  //sorting function called
+
+forEach($names as $name => $age){
+	echo "Name = ".$name. " age = " .$age;
+    echo "<br>";
+
+}
+?>
+
+This will sort the given associative array items and print out following output:: 
+
+Name = Ram age = 10
+Name = Hari age = 9
+Name = Sita age = 8
+
+5. ksort():
+
+This function sorts an associative array in ascending order according to their key.
+CODE::
+
+<?php
+$names = ["Ram"=>"10","Hari"=>"9","Sita"=>"8"];
+ksort($names);  //sorting function called
+
+forEach($names as $name => $age){
+	echo "Name = ".$name. " age = " .$age;
+    echo "<br>";
+
+}
+?>
+
+This will sort the given associative array items and print out following output:: 
+
+Name = Hari age = 9
+Name = Ram age = 10
+Name = Sita age = 8
+
+
+6. krsort():
+
+This function sorts an associative array in descending order according to their key.
+CODE::
+
+<?php
+$names = ["Ram"=>"10","Hari"=>"9","Sita"=>"8"];
+krsort($names);  //sorting function called
+
+forEach($names as $name => $age){
+	echo "Name = ".$name. " age = " .$age;
+    echo "<br>";
+
+}
+?>
+
+This will sort the given associative array items and print out following output:: 
+
+Name = Sita age = 8
+Name = Ram age = 10
+Name = Hari age = 9
+
+
+
+
+
+
+
