@@ -17,11 +17,11 @@ var_dump $emp;
 
 
 echo "<table border='1'>";
-        foreach( $employees as $name => $address)
+        foreach( $gces->employees as $employee)
         {
             echo "<tr>";
-                echo "<td>" .$name. "</td>";
-                echo "<td>" .$address. "</td>";
+                echo "<td>" .$employee->name. "</td>";
+                echo "<td>" .$employee->address. "</td>";
             echo "</tr>";
         }
 echo "</table>";
