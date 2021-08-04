@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Drag & Drop Elements</title>
+    </head>
+
+    <body>
+        
+        <button id="btn" style="position: absolute;">Drag & Drop</button>
+    </body>
+
+    <script>
+        const btn = document.getElementById('btn');
+        
+        btn.addEventListener('mousedown', move);
+
+        function move(){
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('mouseup', drop);
+
+            function drag(){
+                btn.style.left = event.clientX+"px";
+                btn.style.top = event.clientY+"px";
+
+            }
+
+            function drop(){
+                document.removeEventListener('mousemove', drag);
+                document.removeEventListener('mouseup', drop);
+                
+            }
+
+
+        }
+    </script>
+
+</html>

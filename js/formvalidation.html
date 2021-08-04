@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Form Validation With JS</title>
+
+    </head>
+
+    <body>
+        <div id="error"></div>
+        <form action="/">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name"><br /><br />
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password"><br /><br />
+        <input type="submit" value="Submit" id="submit">
+        </form>
+        
+    </body>
+
+    <script>
+        let name = document.querySelector('#name');
+        let password = document.querySelector('#password');
+        let submit = document.querySelector('#submit');
+        let error = document.querySelector('#error');
+        error.innerText = "";
+
+        submit.addEventListener('click', checkForm);
+
+        function checkForm(e){
+            
+            let messages = [];
+
+            if(name.value === "" || name.value == null){
+                messages.push('Name Cannot Be Empty');
+
+            }
+
+            if(password.value === "" || password.value == null){
+                messages.push('Password Cannot Be Empty');
+            }
+
+            if(messages.length > 0){
+                e.preventDefault();
+                error.innerText = messages.join(' and ')
+
+            }
+
+        }
+
+    </script>
+
+
+
+
+
+
+</html>

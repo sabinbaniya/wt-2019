@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Stacking Z-Index</title>
+    </head>
+
+    <body>
+        <img src="img1.JPG" alt="image 1" id="img1" style="height:100px; width:100px; position: relative;">
+        <img src="img2.JPG" alt="image 2" id="img2" style="height:100px; width: 100px; position: absolute; top:50px; left:50px;">
+    </body>
+
+    <script>
+        const img1 = document.querySelector('#img1');
+        const img2 = document.querySelector('#img2');
+
+        img1.addEventListener('click', bringImg1Up);
+        img2.addEventListener('click', bringImg2Up);
+
+        function bringImg1Up(){
+            img1.style.zIndex = 2;
+            img2.style.zIndex = 1;
+        }
+
+        function bringImg2Up(){
+            img1.style.zIndex = 1;
+            img2.style.zIndex = 2;
+        }
+    </script>
+</html>
